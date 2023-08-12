@@ -38,35 +38,35 @@ function temp_Conversion() {
     setTimeout(() => {
 
         if (tempType.value === "celsius") {
-            celsiusField.innerHTML = `${inputValue} &deg;c`;
+            celsiusField.innerHTML = `${inputValue} &deg;C`;
 
             const celsiusToFahrenheit = (inputValue * (9 / 5)) + 32;
-            fahrenheitField.innerHTML = `${celsiusToFahrenheit.toFixed(3)} &deg;c`;
+            fahrenheitField.innerHTML = `${celsiusToFahrenheit.toFixed(3)} &deg;F`;
 
             const celsiusToKelvin = (inputValue * (1)) + 273.15;
-            kelvinField.innerHTML = `${celsiusToKelvin.toFixed(3)} &deg;c`;
+            kelvinField.innerHTML = `${celsiusToKelvin.toFixed(3)} K`;
         }
 
         else if (tempType.value === "fahrenheit") {
             const fahrenheitToCelsius = (inputValue - 32) * (5 / 9);
-            celsiusField.innerHTML = `${fahrenheitToCelsius.toFixed(3)} &deg;c`;
+            celsiusField.innerHTML = `${fahrenheitToCelsius.toFixed(3)} &deg;C`;
 
             // const fahrenheitToFahrenheit = inputValue;
-            fahrenheitField.innerHTML = `${inputValue} &deg;c`;
+            fahrenheitField.innerHTML = `${inputValue} &deg;F`;
 
             const fahrenheitToKelvin = (inputValue - 32) * (5 / 9) + 273.15;
-            kelvinField.innerHTML = `${fahrenheitToKelvin.toFixed(3)} &deg;c`;
+            kelvinField.innerHTML = `${fahrenheitToKelvin.toFixed(3)} K`;
         }
 
         else if (tempType.value === "kelvin") {
             const kelvinToCelsius = inputValue - 273.15;
-            celsiusField.innerHTML = `${kelvinToCelsius.toFixed(3)} &deg;c`;
+            celsiusField.innerHTML = `${kelvinToCelsius.toFixed(3)} &deg;C`;
 
             const kelvinToFahrenheit = ((inputValue - 273.15) * (9 / 5)) + 32;
-            fahrenheitField.innerHTML = `${kelvinToFahrenheit.toFixed(3)} &deg;c`;
+            fahrenheitField.innerHTML = `${kelvinToFahrenheit.toFixed(3)} &deg;F`;
 
             // const kelvinToKelvin = inputValue;
-            kelvinField.innerHTML = `${inputValue} &deg;c`;
+            kelvinField.innerHTML = `${inputValue} K`;
         }
     }, 1200)
 }
